@@ -1,0 +1,25 @@
+# CMake
+/build*/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+# Build outputs
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+*.user
+.DS_Store
+Thumbs.db
