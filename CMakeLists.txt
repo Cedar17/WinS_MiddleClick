@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(WinS_MiddleClick VERSION 1.0.0 LANGUAGES CXX RC)
+project(WinS_MiddleClick VERSION 1.0 LANGUAGES CXX RC)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -42,11 +42,11 @@ file(WRITE "${WINSMC_RC}"
 "        BEGIN\n"
 "            VALUE \"CompanyName\", \"Cedar17\"\n"
 "            VALUE \"FileDescription\", \"Win+S to Middle Click\"\n"
-"            VALUE \"FileVersion\", \"1.0.0\"\n"
+"            VALUE \"FileVersion\", \"1.0\"\n"
 "            VALUE \"InternalName\", \"${WINSMC_EXE_NAME}\"\n"
 "            VALUE \"OriginalFilename\", \"${WINSMC_EXE_NAME}.exe\"\n"
 "            VALUE \"ProductName\", \"${WINSMC_PRODUCT_NAME}\"\n"
-"            VALUE \"ProductVersion\", \"1.0.0\"\n"
+"            VALUE \"ProductVersion\", \"1.0\"\n"
 "        END\n"
 "    END\n"
 "    BLOCK \"VarFileInfo\"\n"
