@@ -21,7 +21,39 @@ set(WINSMC_PRODUCT_NAME "WinS_MiddleClick-${WINSMC_ARCH}")
 set(WINSMC_EXE_NAME "WinS_MiddleClick-${WINSMC_ARCH}")
 set(WINSMC_RC "${CMAKE_CURRENT_BINARY_DIR}/WinS_MiddleClick_version.rc")
 
-file(WRITE "${WINSMC_RC}" "#include <windows.h>\n\nVS_VERSION_INFO VERSIONINFO\n FILEVERSION 1,0,0,0\n PRODUCTVERSION 1,0,0,0\n FILEFLAGSMASK 0x3fL\n#ifdef _DEBUG\n FILEFLAGS 0x1L\n#else\n FILEFLAGS 0x0L\n#endif\n FILEOS 0x40004L\n FILETYPE 0x1L\n FILESUBTYPE 0x0L\nBEGIN\n    BLOCK \\\"StringFileInfo\\\"\n    BEGIN\n        BLOCK \\\"040904B0\\\"\n        BEGIN\n            VALUE \\\"CompanyName\\\", \\\"Cedar17\\\\0\\\"\n            VALUE \\\"FileDescription\\\", \\\"Win+S to Middle Click\\\\0\\\"\n            VALUE \\\"FileVersion\\\", \\\"1.0.0\\\\0\\\"\n            VALUE \\\"InternalName\\\", \\\"${WINSMC_EXE_NAME}\\\\0\\\"\n            VALUE \\\"OriginalFilename\\\", \\\"${WINSMC_EXE_NAME}.exe\\\\0\\\"\n            VALUE \\\"ProductName\\\", \\\"${WINSMC_PRODUCT_NAME}\\\\0\\\"\n            VALUE \\\"ProductVersion\\\", \\\"1.0.0\\\\0\\\"\n        END\n    END\n    BLOCK \\\"VarFileInfo\\\"\n    BEGIN\n        VALUE \\\"Translation\\\", 0x0409, 1200\n    END\nEND\n")
+file(WRITE "${WINSMC_RC}"
+"#include <windows.h>\n\n"
+"VS_VERSION_INFO VERSIONINFO\n"
+" FILEVERSION 1,0,0,0\n"
+" PRODUCTVERSION 1,0,0,0\n"
+" FILEFLAGSMASK 0x3fL\n"
+"#ifdef _DEBUG\n"
+" FILEFLAGS 0x1L\n"
+"#else\n"
+" FILEFLAGS 0x0L\n"
+"#endif\n"
+" FILEOS 0x40004L\n"
+" FILETYPE 0x1L\n"
+" FILESUBTYPE 0x0L\n"
+"BEGIN\n"
+"    BLOCK \"StringFileInfo\"\n"
+"    BEGIN\n"
+"        BLOCK \"040904B0\"\n"
+"        BEGIN\n"
+"            VALUE \"CompanyName\", \"Cedar17\"\n"
+"            VALUE \"FileDescription\", \"Win+S to Middle Click\"\n"
+"            VALUE \"FileVersion\", \"1.0.0\"\n"
+"            VALUE \"InternalName\", \"${WINSMC_EXE_NAME}\"\n"
+"            VALUE \"OriginalFilename\", \"${WINSMC_EXE_NAME}.exe\"\n"
+"            VALUE \"ProductName\", \"${WINSMC_PRODUCT_NAME}\"\n"
+"            VALUE \"ProductVersion\", \"1.0.0\"\n"
+"        END\n"
+"    END\n"
+"    BLOCK \"VarFileInfo\"\n"
+"    BEGIN\n"
+"        VALUE \"Translation\", 0x0409, 1200\n"
+"    END\n"
+"END\n")
 
 add_executable(WinS_MiddleClick WIN32
     src/main.cpp
