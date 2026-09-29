@@ -1,5 +1,7 @@
 # WinS_MiddleClick
 
+Version: **1.0**
+
 A tiny, zero-UI Windows utility that maps plain `Win+S` to a middle mouse click while preserving normal Windows-key shortcuts.
 
 ## Behavior
